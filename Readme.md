@@ -1,5 +1,7 @@
 # Chat Bot GROQ - Conversational AI com LangChain e Streamlit
 
+![imagem](https://cdn.asp.events/CLIENT_Informa__AADDE28D_5056_B739_5481D63BF875B0DF/sites/ai-summit-NY-2022/media/libraries/exhibitors/0b84f0a6-3bbd-11ee-bff906bd0f937899-cover-image.png)
+
 Este é um projeto de Chatbot utilizando os modelos **GROQ** e a estrutura do **LangChain** com interface **Streamlit**. O bot é capaz de manter a memória da conversa, utilizando entidades com **ConversationEntityMemory** para gerar interações contínuas e naturais.
 
 ## Funcionalidades
