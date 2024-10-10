@@ -163,24 +163,22 @@ try:
         streaming=True, 
         api_key=replicate_api 
     )
+    if 'entity_memory' not in st.session_state:
+        st.session_state.entity_memory = ConversationEntityMemory(llm=llm, k=100)
+        
+        # Create the ConversationChain object with the specified configuration
+        
+    Conversation = ConversationChain(
+                llm=llm, 
+                prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE,
+                memory=st.session_state.entity_memory,
+                verbose=True,
+        
+            ) 
      
 except GroqError:
     st.error("Por favor, insira um token de API válido. Clique no botão para abrir uma conta na [GROQ](https://console.groq.com/keys) e obter um token.")
 
-
-    # Create a ConversationEntityMemory object if not already created
-if 'entity_memory' not in st.session_state:
-    st.session_state.entity_memory = ConversationEntityMemory(llm=llm, k=100)
-        
-        # Create the ConversationChain object with the specified configuration
-        
-Conversation = ConversationChain(
-            llm=llm, 
-            prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE,
-            memory=st.session_state.entity_memory,
-            verbose=True,
-    
-        ) 
 
 
 # Get the user input
