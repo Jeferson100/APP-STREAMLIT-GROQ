@@ -21,7 +21,7 @@ Este é um projeto de Chatbot utilizando os modelos **GROQ** e a estrutura do **
 
 ## Requisitos
 
-- Python 3.7+
+- Python 3.10+
 - Biblioteca **Streamlit**
 - Biblioteca **LangChain**
 - Conta e API Key na **GROQ**
@@ -83,11 +83,6 @@ No menu lateral, selecione o modelo desejado, ajuste a temperatura e top_p para 
 ### Histórico de Conversa
 As interações são registradas e podem ser visualizadas no painel principal da aplicação. Use a opção de download para exportar a conversa em formato de texto ou Markdown.
 
-### Exemplo de Interação
-
-1. **Usuário**: Como posso acessar os modelos da GROQ?
-2. **Assistente**: Para acessar os modelos da GROQ, você precisa de uma chave de API. Crie uma conta na [GROQ Console](https://console.groq.com/keys) e obtenha sua chave.
-
 ## Contribuição
 
 1. Faça um fork do projeto.
@@ -101,6 +96,4 @@ As interações são registradas e podem ser visualizadas no painel principal da
 - [GitHub](https://github.com/jeferson100)
 - [LinkedIn](https://www.linkedin.com/in/jefersonsehnem/)
 
----
 
-Projeto criado por [Seu Nome].
