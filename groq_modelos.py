@@ -127,7 +127,7 @@ with st.sidebar:
     
     max_length = st.sidebar.slider('Max_length', 
                                    min_value=20, 
-                                   max_value=200, 
+                                   max_value=500, 
                                    value=100, 
                                    step=5)
 
@@ -163,26 +163,27 @@ try:
         streaming=True, 
         api_key=replicate_api 
     )
-    if 'entity_memory' not in st.session_state:
-        st.session_state.entity_memory = ConversationEntityMemory(llm=llm, k=100)
-        
-        # Create the ConversationChain object with the specified configuration
-        
-    Conversation = ConversationChain(
-                llm=llm, 
-                prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE,
-                memory=st.session_state.entity_memory,
-                verbose=True,
-        
-            ) 
+    
      
 except GroqError:
     st.error("Por favor, insira um token de API válido. Clique no botão para abrir uma conta na [GROQ](https://console.groq.com/keys) e obter um token.")
 
+try:     
+    if 'entity_memory' not in st.session_state:
+        st.session_state.entity_memory = ConversationEntityMemory(llm=llm, k=100)
+        
+    Conversation = ConversationChain(
+                    llm=llm, 
+                    prompt=ENTITY_MEMORY_CONVERSATION_TEMPLATE,
+                    memory=st.session_state.entity_memory,
+                    verbose=True,
+            
+                ) 
+except:
+    pass
 
 
-# Get the user input
-#user_input = get_text()
+
 
 user_input = st.chat_input("Sou seu assistente. Como posso ajudá-lo?")
 
