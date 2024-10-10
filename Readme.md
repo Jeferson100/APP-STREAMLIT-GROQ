@@ -2,6 +2,8 @@
 
 ![imagem](https://cdn.asp.events/CLIENT_Informa__AADDE28D_5056_B739_5481D63BF875B0DF/sites/ai-summit-NY-2022/media/libraries/exhibitors/0b84f0a6-3bbd-11ee-bff906bd0f937899-cover-image.png)
 
+[Video app streamlit](GroqModelos.mp4)
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://groq-modelos.streamlit.app/)
 
 Este é um projeto de Chatbot utilizando os modelos **GROQ** e a estrutura do **LangChain** com interface **Streamlit**. O bot é capaz de manter a memória da conversa, utilizando entidades com **ConversationEntityMemory** para gerar interações contínuas e naturais.
